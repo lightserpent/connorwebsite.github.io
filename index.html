@@ -6,15 +6,56 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Tic Tac Toe</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     </head>
-    <body>
-        <button onclick="testAlert()"> rise up</button>
-        <div>rawr xd</div>
+    <body style="background-color:white">
+        <div>
+        <div id="startscreen" style="text-align:center">
+        <h2>You are about to face an unbeatable player at tic tac toe, you will not succeed.<br></h1>
+            <h1 style="margin-top:25%; font-size:100px">Do You Accept the Challenge?</h1>
+            <button id="startbutton" onclick="startGame()">I am ready for defeat.</button>     
+        </div>
+        </div>
+        <p id="countdown"></p>
+        <div id="game" style="display:none;">
+        <div class="col-md-3">
+            
+            <p style="margin-left:170px;margin-top:150px;font-size:20px">Move History</p><br>
+        <p id="movehistory" style="margin-left:30px;font-size:20px"><br></p>
+        
+        </div>
+        
+            <div class="col-md-6">
+                <p  id="caution" style="text-align:center;margin-top:50px;font-size:30px"></p>
+                
+            <table id="tictactoeboard">
+                <tr>
+                    <td onclick="placeXSymbol(1, 1)" onmouseover="caution(1,1)" id="block-1/1" class="boardbox" width="100" height="100"><img src="images/BLANK.png" id="blockimage-1/1"></td>
+                    <td onclick="placeXSymbol(1, 2)" onmouseover="caution(1,2)" id="block-1/2" class="boardbox" width="100" height="100"><img src="images/BLANK.png" id="blockimage-1/2"></td>
+                    <td onclick="placeXSymbol(1, 3)" onmouseover="caution(1,3)" id="block-1/3" class="boardbox" width="100" height="100"><img src="images/BLANK.png" id="blockimage-1/3"></td>
+                </tr>
+                <tr>
+                    <td onclick="placeXSymbol(2, 1)" onmouseover="caution(2,1)" id="block-2/1" class="boardbox" width="100" height="100"><img src="images/BLANK.png" id="blockimage-2/1" ></td>
+                    <td onclick="placeXSymbol(2, 2)" onmouseover="caution(2,2)" id="block-2/2" class="boardbox" width="100" height="100"><img src="images/BLANK.png" id="blockimage-2/2"></td>
+                    <td onclick="placeXSymbol(2, 3)" onmouseover="caution(2,3)" id="block-2/3" class="boardbox" width="100" height="100"><img src="images/BLANK.png" id="blockimage-2/3"></td>
+                </tr>
+                <tr>
+                    <td onclick="placeXSymbol(3, 1)" onmouseover="caution(3,1)" id="block-3/1" class="boardbox" width="100" height="100"><img src="images/BLANK.png" id="blockimage-3/1"></td>
+                    <td onclick="placeXSymbol(3, 2)" onmouseover="caution(3,2)" id="block-3/2" class="boardbox" width="100" height="100"><img src="images/BLANK.png" id="blockimage-3/2"></td>
+                    <td onclick="placeXSymbol(3, 3)" onmouseover="caution(3,3)" id="block-3/3" class="boardbox" width="100" height="100"><img src="images/BLANK.png" id="blockimage-3/3"></td>
+                </tr>
+            </table>
+        
+        
+        <p id="personturn" style="text-align:center;font-family:Arial;font-size:50px">It's is now, your turn.<br></p>
+        </div>
+            <div class="col-md-3"></div>
+        </div>
+        
         <script src="myscript.js"></script>
         <script>console.log ("passed all scripts");</script>
     </body>

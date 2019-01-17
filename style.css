@@ -4,7 +4,49 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
 /* 
-    Created on : Jan 16, 2019, 12:07:19 PM
+    Created on : Nov 13, 2018, 3:24:56 PM
     Author     : cmithel
 */
+#tictactoeboard {
+    border: 1px solid black;
+    width: 550px;
+    height: 350px;
+    margin-left: auto;
+    margin-right:   auto;
+    margin-top: 150px;
+    margin-bottom: auto; 
+    border-collapse: collapse;
+}
+.boardbox { 
+   border: 10px solid black; 
+   border-collapse: collapse;
+   padding: 30px;
+   border-spacing:5px  
+}
 
+td:hover{
+    background-color:#39ff14;
+}
+
+
+.tictactoesymbol { 
+    margin: 0px;
+}
+
+#startbutton{   
+    background-color:red; 
+    padding:10px;
+    font-family:Arial;
+    font-size:20px;
+    opacity:0.6;
+    transition:0.8s;
+}
+#startbutton:hover{
+    opacity:1
+}
+
+#countdown{ 
+    display:none;
+    font-size:200px;
+    margin-left:800px;
+}
